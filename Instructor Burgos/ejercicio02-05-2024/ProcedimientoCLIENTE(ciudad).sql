@@ -2,7 +2,7 @@ use bancos;
   DELIMITER $$
   CREATE PROCEDURE cliente_ciudad(in nom_ciudad varchar(50))
   BEGIN
-  SELECT ciudad.nombre, cliente.nombre, cliente.apellidos, cliente.edad FROM cliente
+  SELECT ciudad.nombre as ciudad, cliente.nombre, cliente.apellidos, cliente.edad FROM cliente
   INNER JOIN ciudad ON cliente.id_ciudad= ciudad.id
   WHERE ciudad.nombre= nom_ciudad;
   END $$

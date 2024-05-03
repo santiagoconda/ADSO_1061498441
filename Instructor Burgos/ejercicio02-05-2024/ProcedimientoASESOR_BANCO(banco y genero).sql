@@ -18,4 +18,4 @@ BEGIN
     WHERE banco.nombre = nom_banco AND asesor.genero = a_genero;
 END $$
 DELIMITER ;
-CALL asesorBanco('Bogota', 'M');
+CALL asesorBanco('Bogota', 'F');
